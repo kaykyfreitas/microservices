@@ -18,7 +18,7 @@ public class StockConsumer {
         System.out.println(stockDto.quantity);
         System.out.println("---------------------------");
 
-        Thread.sleep(5000);
+//        throw new IllegalArgumentException("Invalid argument");
     }
 
 }

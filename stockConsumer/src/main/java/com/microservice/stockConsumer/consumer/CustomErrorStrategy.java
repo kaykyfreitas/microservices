@@ -1,0 +1,16 @@
+package com.microservice.stockConsumer.consumer;
+
+import org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler;
+import org.springframework.amqp.rabbit.support.ListenerExecutionFailedException;
+
+public class CustomErrorStrategy extends ConditionalRejectingErrorHandler.DefaultExceptionStrategy {
+
+    @Override
+    public boolean isFatal(Throwable t) {
+        String message = new String(((ListenerExecutionFailedException) t).getFailedMessage().getBody());
+        System.out.println(message);
+
+        return t.getCause() instanceof IllegalArgumentException;
+    }
+
+}
