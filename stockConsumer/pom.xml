@@ -28,6 +28,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.libRabbitMQ</groupId>
 			<artifactId>libRabbitMQ</artifactId>
 			<version>1.0-SNAPSHOT</version>
