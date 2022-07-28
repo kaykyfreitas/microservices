@@ -1,8 +1,7 @@
 package com.microservice.sales.controller;
 
-import com.microservice.sales.constants.RabbitMQConstants;
-import com.microservice.sales.dto.PriceDto;
-import com.microservice.sales.dto.StockDto;
+import constants.RabbitMQConstants;
+import dto.PriceDto;
 import com.microservice.sales.service.RabbitMQService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
